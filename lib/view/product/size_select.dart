@@ -54,7 +54,7 @@ class _SizeSelectState extends State<SizeSelect> {
                       });
                     },
                     child: Container(
-                      margin: EdgeInsets.only(left: Dimension.width15),
+                      margin: EdgeInsets.only(right: Dimension.width15),
                       width: Dimension.width10 * 4,
                       height: Dimension.height10 * 4,
                       alignment: Alignment.center,

@@ -6,11 +6,11 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:shoesmela/util/colors.dart';
 import 'package:shoesmela/util/dimension.dart';
-import 'package:shoesmela/view/wishlist/wishlist_single_item.dart';
+import 'package:shoesmela/view/wishlist/single_item.dart';
 import 'package:shoesmela/widgets/big_text.dart';
 
-class WishList extends StatelessWidget {
-  const WishList({super.key});
+class WishlistPage extends StatelessWidget {
+  const WishlistPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -22,11 +22,21 @@ class WishList extends StatelessWidget {
           Positioned(
             top: Dimension.height10 * 15,
             child: Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.only(
-                  left: Dimension.width10, right: Dimension.width10),
-              child: WishlistSingleItem(),
-            ),
+                alignment: Alignment.center,
+                padding: EdgeInsets.only(
+                    left: Dimension.width10, right: Dimension.width10),
+                child: Column(
+                  children: [
+                    SingleItem(),
+                    SizedBox(height: Dimension.height20),
+                    SingleItem(),
+                    SizedBox(height: Dimension.height20),
+                    SingleItem(),
+                  ],
+                )
+
+                //  WishlistSingleItem(),
+                ),
           ),
           Container(
             alignment: Alignment.topCenter,
@@ -49,7 +59,7 @@ class WishList extends StatelessWidget {
       child: Container(
         width: double.maxFinite,
         color: Colors.white,
-        height: 550,
+        height: Dimension.height50 * 11,
         alignment: Alignment.bottomCenter,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

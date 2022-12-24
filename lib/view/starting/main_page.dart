@@ -4,6 +4,7 @@ import 'package:shoesmela/util/colors.dart';
 import 'package:shoesmela/util/dimension.dart';
 import 'package:shoesmela/view/home/home_page.dart';
 import 'package:shoesmela/view/home/tabs/store.dart';
+import 'package:shoesmela/view/wishlist/wishlist_page.dart';
 import 'package:shoesmela/widgets/custom_appbar.dart';
 import 'package:shoesmela/widgets/custom_bottomnavigatonbar.dart';
 import 'package:shoesmela/widgets/small_text.dart';
@@ -25,7 +26,7 @@ class _MainPageState extends State<MainPage> {
 
   List<Widget> pages = [
     HomePage(),
-    Center(child: Text('wishlist')),
+    WishlistPage(),
     Center(child: Text('working home')),
     Center(child: Text('cart')),
     Center(child: Text('account')),
@@ -33,8 +34,6 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    print("screen height: ${Get.context!.height}");
-    print("screen width: ${Get.context!.width}");
     return Scaffold(
       body: pages.elementAt(_selectedIndex),
       bottomNavigationBar: _CustomBottomNavigationBar(context),
@@ -66,7 +65,7 @@ class _MainPageState extends State<MainPage> {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         elevation: 0,
-        iconSize: Dimension.iconSize20,
+        iconSize: Dimension.iconSize15,
         selectedItemColor: AppClours.buttonBackground2,
         unselectedItemColor: Color.fromARGB(255, 188, 188, 188),
         items: const [

@@ -7,14 +7,14 @@ import 'package:shoesmela/view/product/size_select.dart';
 import 'package:shoesmela/widgets/big_text.dart';
 import 'package:shoesmela/widgets/small_text.dart';
 
-class ProductDetails extends StatefulWidget {
-  const ProductDetails({super.key});
+class ProductDetailPage extends StatefulWidget {
+  const ProductDetailPage({super.key});
 
   @override
-  State<ProductDetails> createState() => _ProductDetailsState();
+  State<ProductDetailPage> createState() => _ProductDetailPageState();
 }
 
-class _ProductDetailsState extends State<ProductDetails> {
+class _ProductDetailPageState extends State<ProductDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,11 +30,14 @@ class _ProductDetailsState extends State<ProductDetails> {
                 width: Dimension.pageViewWidth,
                 height: Dimension.pageViewHeight,
                 decoration: BoxDecoration(
-                  color: AppClours.secondaryBackground,
+                  // color: AppClours.secondaryBackground,
+                  color: Colors.greenAccent,
                   // color: Colors.red,
                   borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(Dimension.radius30),
-                    bottomRight: Radius.circular(Dimension.radius30),
+                    bottomLeft: Radius.circular(
+                        Dimension.radius30 + Dimension.radius10),
+                    bottomRight: Radius.circular(
+                        Dimension.radius30 + Dimension.radius10),
                   ),
                 ),
                 child: Column(

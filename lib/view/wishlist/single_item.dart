@@ -3,8 +3,8 @@ import 'package:shoesmela/util/colors.dart';
 import 'package:shoesmela/util/dimension.dart';
 import 'package:shoesmela/widgets/small_text.dart';
 
-class WishlistSingleItem extends StatelessWidget {
-  const WishlistSingleItem({super.key});
+class SingleItem extends StatelessWidget {
+  const SingleItem({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +38,7 @@ class WishlistSingleItem extends StatelessWidget {
               height: Dimension.height10 * 6,
               child: Image.asset('images/product1.png', fit: BoxFit.cover),
             ),
-            SizedBox(width: Dimension.width20),
+            SizedBox(width: Dimension.width20 * 1.5),
             Expanded(
               // child: Container(
               // color: Colors.red,
